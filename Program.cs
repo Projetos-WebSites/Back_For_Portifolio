@@ -9,9 +9,9 @@ builder.Services.AddCors(options =>
     {
         policy
             .WithOrigins(
-                "http://localhost:5173",           
-                "http://localhost:8080",           
-                "https://joaoaranda-dev.lovable.app"  
+                "http://localhost:5173",
+                "http://localhost:8080",
+                "https://joaoaranda-dev.lovable.app"
             )
             .AllowAnyHeader()
             .AllowAnyMethod();
@@ -26,7 +26,6 @@ builder.Services.AddScoped<IEnviarEmailService, EnviarEmailService>();
 
 var app = builder.Build();
 
-
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -34,8 +33,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("AllowFrontend");
-
-app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
