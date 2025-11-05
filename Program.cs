@@ -26,11 +26,6 @@ builder.Services.AddScoped<IEnviarEmailService, EnviarEmailService>();
 
 var app = builder.Build();
 
-var port = Environment.GetEnvironmentVariable("PORT");
-if (!string.IsNullOrEmpty(port))
-{
-    app.Urls.Add($"http://*:{port}");
-}
 
 if (app.Environment.IsDevelopment())
 {
