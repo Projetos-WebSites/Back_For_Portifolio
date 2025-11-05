@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Contato - Portfólio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f6ff;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(130, 79, 255, 0.15);
+            overflow: hidden;
+            border-top: 5px solid #7e3ff2;
+        }
+
+        .header {
+            background-color: #7e3ff2;
+            color: #fff;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+            .header h1 {
+                margin: 0;
+                font-size: 22px;
+                letter-spacing: 0.5px;
+            }
+
+        .content {
+            padding: 25px 30px;
+            line-height: 1.6;
+        }
+
+            .content h2 {
+                color: #7e3ff2;
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+        .info {
+            background-color: #f4f0ff;
+            border-left: 4px solid #7e3ff2;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+            .info p {
+                margin: 6px 0;
+                font-size: 15px;
+            }
+
+        .message {
+            background: #faf8ff;
+            border-radius: 8px;
+            border: 1px solid #e3d9ff;
+            padding: 15px;
+            font-style: italic;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+        }
+
+            .footer a {
+                color: #7e3ff2;
+                text-decoration: none;
+            }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📬 Novo Contato Recebido</h1>
+        </div>
+
+        <div class="content">
+            <h2>Uma nova pessoa entrou em contato com você através do seu portfólio!</h2>
+
+            <div class="info">
+                <p><strong>👤 Nome:</strong> {{NOME}}</p>
+                <p><strong>📧 E-mail:</strong> {{EMAIL}}</p>
+                <p><strong>📅 Data de envio:</strong> {{DATA_ENVIO}}</p>
+            </div>
+
+            <h3 style="color:#7e3ff2;">💬 Mensagem:</h3>
+            <div class="message">
+                {{MESSAGE}}
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Este e-mail foi gerado automaticamente pelo seu portfólio.</p>
+            <p><a href="https://seusite.com" target="_blank">Visite seu site</a></p>
+        </div>
+    </div>
+</body>
+</html>
